@@ -1,11 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Build-a-Bear — Parcial 1</title>
+        <style>
+            :root{--accent:#ff7a59;--muted:#666;--bg:#fff9f6}
+            *{box-sizing:border-box;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+            body{margin:0;background:var(--bg);color:#111}
+            header{background:linear-gradient(90deg,#fff 0%,#fffefc 70%);padding:24px 16px;border-bottom:1px solid #eee}
+            .container{max-width:1100px;margin:0 auto;padding:24px}
+            .brand{display:flex;gap:12px;align-items:center}
+            .logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#ffbf9b);display:flex;align-items:center;justify-content:center;font-size:24px}
+            h1{margin:8px 0 0;font-size:28px}
+            p.lead{color:var(--muted);margin:8px 0 20px}
+            .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center}
+            .card{background:white;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(17,17,17,0.06)}
+            .cta{display:flex;gap:10px}
+            .btn{padding:10px 14px;border-radius:8px;border:0;cursor:pointer}
+            .btn-primary{background:var(--accent);color:white}
+            .btn-outline{background:transparent;border:1px solid #eee}
+            .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+            .prod{display:flex;flex-direction:column;align-items:center;padding:12px;border-radius:10px}
+            .prod .face{font-size:64px}
+            footer{margin-top:28px;padding:18px 0;color:var(--muted);font-size:14px;text-align:center}
+            @media(max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}}
+            @media(max-width:560px){.grid{grid-template-columns:1fr}.logo{width:40px;height:40px}}
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container brand">
+                <div class="logo">🐻</div>
+                <div>
+                    <div style="font-weight:700">Build-a-Bear</div>
+                    <div style="font-size:13px;color:var(--muted)">Parcial 1 — Proyecto de muestra</div>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <section class="hero">
+                <div>
+                    <h1>Diseña tu propio osito de peluche</h1>
+                    <p class="lead">Elige el peluche, añade ropa, y dale un nombre. Una experiencia simple para crear un regalo único.</p>
+
+                    <div class="card">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <div>
+                                <strong>Destacados</strong>
+                                <div style="color:var(--muted);font-size:13px">Rápido, divertido y seguro</div>
+                            </div>
+                            <div class="cta">
+                                <button class="btn btn-primary">Crear ahora</button>
+                                <button class="btn btn-outline">Ver opciones</button>
+                            </div>
+                        </div>
+
+                        <div class="grid">
+                            <div class="prod card">
+                                <div class="face">🧸</div>
+                                <div style="font-weight:600;margin-top:8px">Clásico Marrón</div>
+                                <div style="color:var(--muted);font-size:13px;margin-top:6px">Suave, abrazable y tradicional</div>
+                            </div>
+                            <div class="prod card">
+                                <div class="face">🐼</div>
+                                <div style="font-weight:600;margin-top:8px">Panda Dulce</div>
+                                <div style="color:var(--muted);font-size:13px;margin-top:6px">Tierno y moderno</div>
+                            </div>
+                            <div class="prod card">
+                                <div class="face">🦊</div>
+                                <div style="font-weight:600;margin-top:8px">Zorrito</div>
+                                <div style="color:var(--muted);font-size:13px;margin-top:6px">Colorido y juguetón</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside>
+                    <div class="card" style="text-align:center">
+                        <div style="font-size:54px">🎁</div>
+                        <h3 style="margin:8px 0 4px">Empaque personalizado</h3>
+                        <div style="color:var(--muted);font-size:14px">Añade una tarjeta y envoltorio especial.</div>
+                        <div style="margin-top:12px"><button class="btn btn-primary">Añadir empaque</button></div>
+                    </div>
+                </aside>
+            </section>
+
+            <footer>
+                © 2026 Build-a-Bear — Página de ejemplo creada para el parcial.
+            </footer>
+        </main>
+    </body>
 </html>
